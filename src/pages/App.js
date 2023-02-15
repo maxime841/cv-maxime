@@ -1,14 +1,15 @@
 import './App.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import profil from '../assets/homme.webp';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="App-header-bloc">
-        <img src="" alt="Portrait" />
-        <h1 className="App-header-job">Développeur web et web mobile</h1>
-        <span className="App-header-name">Maxime Poirot</span>
+        <img className="App-photo" src={profil} alt="Portrait" />
+        <div className="App-header-content">
+          <h1 className="App-header-job">Développeur web et web mobile</h1>
+          <span className="App-header-name">Maxime Poirot</span>
         </div>
       </header>
       <nav className="App-nav">
@@ -262,6 +263,14 @@ function App() {
             <li>Anglais</li>
           </ul>
         </section>
+        <section className="App-savoir">
+        <h3 className="App-savoir-title">Savoir être</h3>
+          <ul>
+            <li>Capacité d'adaptation</li>
+            <li>Rigoureux</li>
+            <li>Créatif</li>
+          </ul>
+        </section>
         <section className="App-hobbies">
         <h3 className="App-hobbies-title">Loisirs</h3>
           <ul>
@@ -269,7 +278,6 @@ function App() {
             <li>Musiques Electroniques</li>
           </ul>
         </section>
-
     </div>
   );
 }
