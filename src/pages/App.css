@@ -1,3 +1,7 @@
+.App {
+  background-color:#DCDCDC;
+}
+
 .App-header {
  border: 1px solid black;
  margin: 30px 300px 10px 100px;
@@ -7,6 +11,8 @@
  border-bottom-right-radius: 20px;
  display: flex;
  background-color: #A9A9A9;
+ z-index: 2;
+ position: absolute;
 }
 
 .App-photo {
@@ -16,9 +22,14 @@
   margin-right: 20px;
 }
 
+.qrcode {
+  height: 150px;
+}
+
 .App-header-content {
   text-align: left;
   margin: 25px 5px;
+  padding: 0 50px;
 }
 
 .App-header-job {
@@ -32,6 +43,40 @@
   font-size: 2rem;
 }
 
+.App-content {
+  display: flex;
+}
+
+.App-nav {
+  background-color: #808080;
+  width: 320px;
+  height: full-screen;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0, 20px;
+}
+
+.App-profil {
+  margin-top: 210px;
+}
+
+.App-profil-sub-title {
+  text-align: center;
+  color: #fff;
+}
+
+.App-information {
+  width:1500px;
+  margin-top: 210px;
+  padding-left: 30px;
+}
+
+.hr {
+  position: absolute;
+  z-index: 2;
+}
+
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
@@ -39,8 +84,8 @@
 
 .timeline ol {
   font-size: 0;
-  width: 100vw;
-  padding: 250px 0;
+  width: 10vw;
+  padding: 100px 0;
   transition: all 1s;
 }
 
@@ -48,9 +93,10 @@
   position: relative;
   display: inline-block;
   list-style-type: none;
-  width: 160px;
+  width: 120px;
   height: 3px;
   background: #fff;
+  z-index: 1;
 }
 
 .timeline ol li:last-child {
@@ -102,7 +148,7 @@
 
 .timeline ol li:nth-child(odd) div::before {
   top: 100%;
-  border-width: 8px 8px 0 0;
+  border-width: 12px 12px 0 0;
   border-color: white transparent transparent transparent;
 }
 
@@ -116,6 +162,129 @@
   top: -8px;
   border-width: 8px 0 0 8px;
   border-color: transparent transparent transparent white;
+}
+
+.App-competences {
+  position: absolute;
+  right: 40px;
+  top: 400px;
+}
+
+.App-competence-liste {
+  display: flex;
+  border: 2px solid black;
+  margin: 15px 0;
+  list-style: none;
+  background-color: #A9A9A9;
+  border-radius: 20px;
+}
+
+.App-competence-items {
+  margin: 5px 20px;
+  padding: 10px 0;
+}
+
+.App-competence-items-box {
+  margin-top: 10px;
+  margin-right: 8px
+}
+
+.App-savoir {
+  position: absolute;
+  left: 500px;
+  bottom: 0;
+
+}
+
+.App-hobbies {
+  position: absolute;
+  right: 700px;
+  bottom: 0px;
+}
+
+.App-langage-items {
+  list-style: none;
+}
+
+.App-langage-content {
+  display: flex;
+}
+
+.App-langage-title-french {
+  margin-right: 5px;
+}
+
+.App-langage-title-english {
+  margin-right: 13px;
+}
+
+.svg-pc {
+  position: absolute;
+  left: 900px;
+  top: 650px;
+}
+
+.svg-mouse {
+  position: absolute;
+  left: 1250px;
+}
+
+.svg-user {
+  position: absolute;
+  left: 830px;
+  top: 750px;
+}
+
+.svg-keyboard {
+  position:absolute;
+  left: 1100px;
+  top: 750px;
+}
+
+.casque {
+  position: absolute;
+  left: 750px;
+  top: 700px;
+}
+
+.ligne-casque {
+  width: 50px;
+  position: absolute;
+  left: 680px;
+  top: 710px;
+  transform: rotate(7deg);
+}
+
+.ligne-pc {
+  width: 50px;
+  position: absolute;
+  left: 850px;
+  top: 600px;
+  transform: rotate(40deg);
+}
+
+.ligne-sourie {
+  width: 100px;
+  position: absolute;
+  left: 1310px;
+  top: 650px;
+  transform: rotate(-40deg);
+}
+
+.ligne-user {
+  width: 100px;
+  position: absolute;
+  left: 730px;
+  top: 820px;
+  transform: rotate(-30deg);
+}
+
+.ligne-keyboard {
+  width: 40px;
+  position: absolute;
+  left: 1060px;
+  top: 820px;
+  transform: rotate(-50deg);
 }
 
 

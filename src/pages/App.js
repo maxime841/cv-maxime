@@ -1,9 +1,24 @@
 import './App.css';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import Box from "@mui/material/Box";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import ProgressBar from "@ramonak/react-progress-bar";
 import profil from '../assets/homme.webp';
+import QRCode from '../assets/frame.png';
+import casque from '../assets/illust58-2326.jpg';
 
 function App() {
-  return (
+  const totalStars = 5;
+  const activeStarsHTML = 4;
+  const activeStarsJavascript = 4;
+  const activeStarsNodes = 4;
+  const activeStarsREACT = 4;
+  const activeStarsSQL = 5;
+  const activeStarsSqitch = 3;
+  const activeStarsGit = 4;
+  const activeStarsAgile = 4;
+
+  return ( 
     <div className="App">
       <header className="App-header">
         <img className="App-photo" src={profil} alt="Portrait" />
@@ -12,10 +27,11 @@ function App() {
           <span className="App-header-name">Maxime Poirot</span>
         </div>
       </header>
+      <div className="App-content">
       <nav className="App-nav">
         <article className="App-profil">
           <h2 className="App-profil-sub-title">Profil</h2>
-          <p>En recherche d'un poste dans le developpement web pour developper mes competence acquise et en avoir de nouvelle pour me perfectionner.</p>
+          <p>En recherche d'un poste dans le developpement web pour developper mes competences acquises et en avoir de nouvelles pour me perfectionner, et ainsi connaître de nouvelles technologies.</p>
 
         </article>
         <article className="App-contact">
@@ -98,13 +114,14 @@ function App() {
           <p className="App-contact-linkedin">https://github.com/maxime841</p>
         </article>
         <article className="App-qr-code">
-          <h2 className="App-profil-sub-title">QR Code</h2>
-          <img src="" alt="portrait qr code" />
+          <h2 className="App-profil-sub-title">QR Code Github</h2>
+          <img className="qrcode" src={QRCode} alt="portrait qr code" />
         </article>
       </nav>
+      <div className="App-information">
       <section className="timeline">
         <h3 className="App-education">Scolarité</h3>
-          <ol>
+          <ol className="App-frise">
             <li>
               <div>
                 <time>1984 </time>
@@ -138,6 +155,12 @@ function App() {
             <li>
               <div>
                 <time>2020 </time>
+                Formation Développeur web et web mobile (5 mois)
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>2022 </time>
                 Titre professionnel Développeur web et web mobile
               </div>
             </li>
@@ -147,120 +170,174 @@ function App() {
           <h3 className="App-work-title">Expériences professionnelles</h3>
           <ul>
             <li>
-              2021-2022 Blog Game of Throne coder en react et une API en express
+              2021-2022 Blog Game of Throne API en express et blog en REACT
             </li>
             <li>
-              2020-2021 Asela Site vitrine avec back office concernant l'adoption d'animaux coder en vue.js et express
+              2020-2021 Asela Site vitrine en vue.js et back office en express
             </li>
             <li>
               2014-2016 Professeur de technologie niveau collège
             </li>
             <li>
-              2008-2012 2016-2017 Technicien en electronique
+              2008-2012 2016-2018 Technicien en electronique
             </li>
             <li>
               2013-2014 Conducteur de ligne en agro-alimentaire
             </li>
           </ul>
+          <svg className="svg-pc" 
+            xmlns="http://www.w3.org/2000/svg" 
+            id="Layer_1" 
+            data-name="Layer 1" 
+            viewBox="0 0 800 800">
+              <title>computer</title>
+              <path 
+            class="cls-1" 
+            d="M90.11,21.7h28.81a4,4,0,0,1,4,4V86.93a4,4,0,0,1-4,4H90.11a4,4,0,0,1-4-4V25.65a4,4,0,0,1,4-3.95ZM3,0H106.55a3.05,3.05,0,0,1,3,3v7.85h-4V7a2.69,2.69,0,0,0-2.69-2.69H6.67A2.69,2.69,0,0,0,4,7V61.87a2.7,2.7,0,0,0,2.68,2.69H76.1v11.6H3a3,3,0,0,1-3-3V3A3.05,3.05,0,0,1,3,0ZM41,80.36H68.59c.07,4.77,2,9,7.36,12.41H33.64C37.93,89.66,41,85.91,41,80.36Zm73.23-42.28h2.87v1.64h-2.87V38.08Zm-9.72,36.43a4.31,4.31,0,1,1-4.31,4.3,4.31,4.31,0,0,1,4.31-4.3Zm-13-40.18h26a.82.82,0,0,1,.82.82v4.47a.83.83,0,0,1-.82.83h-26a.82.82,0,0,1-.82-.82V35.15a.82.82,0,0,1,.82-.82Z"/>
+          </svg>
+          <svg className="svg-mouse"
+          xmlns="http://www.w3.org/2000/svg" 
+          shape-rendering="geometricPrecision" 
+          text-rendering="geometricPrecision" 
+          image-rendering="optimizeQuality" 
+          fill-rule="evenodd" 
+          clip-rule="evenodd" 
+          viewBox="0 0 5000 5000">
+            <path 
+            fill-rule="nonzero" 
+            d="M122.89 495.31h33.22c29.19 0 55.74-11.95 74.99-31.2 19.24-19.25 31.2-45.8 31.2-74.99V275.56H16.7v113.56c0 29.19 11.96 55.74 31.2 74.99 19.25 19.25 45.8 31.2 74.99 31.2zm5.23-412.59V64.69c0-9.7-1.53-17.63-4.22-23.92-3.06-7.16-7.7-12.31-13.31-15.63-5.76-3.4-12.72-5.02-20.22-5.02-8.35 0-17.26 1.99-25.9 5.68-5.1 2.16-11-.21-13.16-5.31-2.17-5.1.21-10.99 5.3-13.16C67.77 2.56 79.38 0 90.37 0c10.96 0 21.43 2.52 30.44 7.85 9.17 5.43 16.7 13.7 21.56 25.06 3.74 8.77 5.88 19.33 5.88 31.78v18.03h7.86c33.8 0 64.53 13.82 86.8 36.09 22.27 22.27 36.09 53 36.09 86.8v183.51c0 33.8-13.82 64.53-36.09 86.8-22.27 22.27-53 36.09-86.8 36.09h-33.22c-33.8 0-64.53-13.82-86.8-36.09C13.82 453.65 0 422.92 0 389.12V205.61c0-33.8 13.82-64.53 36.09-86.8 22.27-22.27 53-36.09 86.8-36.09h5.23zM262.3 258.86v-53.25c0-29.19-11.96-55.74-31.2-74.99-19.25-19.25-45.8-31.2-74.99-31.2h-6.55v50.99c7.28 3.71 12.3 11.29 12.3 19.94v35.75c0 8.64-5.03 16.22-12.3 19.93v32.83H262.3zm-132.86 0v-32.82c-7.26-3.7-12.3-11.26-12.3-19.94v-35.75c0-8.68 5.02-16.25 12.3-19.94V99.42h-6.55c-29.19 0-55.74 11.95-74.99 31.2-19.24 19.25-31.2 45.8-31.2 74.99v53.25h112.74z"/>
+          </svg>
+          <svg className="svg-user" 
+            xmlns="http://www.w3.org/2000/svg" 
+            height="50px" 
+            width="50px" 
+            version="1.1" 
+            id="Capa_1" 
+            viewBox="0 0 60.671 60.671" >
+              <g>
+	              <g>
+		            <ellipse 
+                cx="30.336" 
+                cy="12.097" 
+                rx="11.997" 
+                ry="12.097"/>
+		              <path 
+                  d="M35.64,30.079H25.031c-7.021,0-12.714,5.739-12.714,12.821v17.771h36.037V42.9    C48.354,35.818,42.661,30.079,35.64,30.079z"/>
+	              </g>
+              </g>
+            </svg>
+            <svg className="svg-keyboard"
+              xmlns="http://www.w3.org/2000/svg" 
+              version="1.1" 
+              id="_x32_" 
+              viewBox="0 0 6000 6000">
+              <g>
+	              <path class="st0" d="M459.576,99.307H52.423C23.524,99.307,0,122.837,0,151.736v192.879c0,37.536,30.537,68.078,68.068,68.078   h375.862c37.532,0,68.069-30.542,68.069-68.078V151.736C512,122.837,488.475,99.307,459.576,99.307z M485.515,344.615   c0,22.934-18.655,41.589-41.584,41.589H68.068c-22.929,0-41.584-18.655-41.584-41.589V151.736   c0-14.306,11.638-25.938,25.938-25.938h407.154c14.301,0,25.938,11.633,25.938,25.938V344.615z"/>
+	                <rect x="189.792" y="233.929" class="st0" width="44.138" height="44.142"/>
+	                <rect x="256.002" y="233.929" class="st0" width="44.134" height="44.142"/>
+	                <rect x="322.207" y="233.929" class="st0" width="44.138" height="44.142"/>
+	                <rect x="410.484" y="300.139" class="st0" width="44.134" height="44.134"/>
+	                <rect x="189.792" y="167.729" class="st0" width="44.138" height="44.134"/>
+	                <rect x="123.587" y="233.929" class="st0" width="44.138" height="44.142"/>
+	                <rect x="123.587" y="167.729" class="st0" width="44.138" height="44.134"/>
+	                <rect x="57.382" y="300.139" class="st0" width="44.134" height="44.134"/>
+	                <rect x="57.382" y="233.929" class="st0" width="44.134" height="44.142"/>
+	                <rect x="57.382" y="167.729" class="st0" width="44.134" height="44.134"/>
+	                <rect x="256.002" y="167.729" class="st0" width="44.134" height="44.134"/>
+	                <rect x="322.207" y="167.729" class="st0" width="44.138" height="44.134"/>
+	                <rect x="123.587" y="300.139" class="st0" width="264.825" height="44.134"/>
+	                <rect x="388.412" y="167.729" class="st0" width="66.205" height="110.343"/>
+              </g>
+            </svg>
         </section>
         <section className="App-competences">
         <h3 className="App-competence-title">Compétences</h3>
           <ul>
-            <li>HTML / CSS / SCSS / Bootstrap / Tailwind</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">HTML / CSS / SCSS / Bootstrap / Tailwind</li> 
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsHTML ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
-            </div>
-            <li>Javascript</li>
-            <div style={{ width: 20, height: 20 }}>
-               <CircularProgressbar
-                  value={75}
-                  styles={buildStyles({
-                  textColor: "black",
-                  pathColor: "grey",
-                  trailColor: "white"
-                  })}
-                /> 
-            </div>
-            <li>NodeJS / Express / Laravel</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+              </Box>        
+              </div>
+            <div className="App-competence-liste">
+              <li className="App-competence-items">Javascript</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsJavascript ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
             </div>
-            <li>REACT / Typescript</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">NodeJS / Express / Laravel</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsNodes ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
             </div>
-            <li>PostgreSQL / SQL</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">REACT / Typescript</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsREACT ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
             </div>
-            <li>Sqitch</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">PostgreSQL / SQL</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsSQL ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
             </div>
-            <li>Github / Git</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">Sqitch</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsSqitch ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
             </div>
-            <li>Methode Agile / Scrum</li>
-            <div style={{ width: 20, height: 20 }}>
-              <CircularProgressbar
-                value={75}
-                styles={buildStyles({
-                textColor: "black",
-                pathColor: "grey",
-                trailColor: "white"
+            <div className="App-competence-liste">
+              <li className="App-competence-items">Github / Git</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsGit ? <StarIcon /> : <StarBorderIcon />;
                 })}
-              /> 
+              </Box>
+            </div>
+            <div className="App-competence-liste">
+              <li className="App-competence-items">Methode Agile / Scrum</li>
+              <Box className="App-competence-items-box">
+                {[...new Array(totalStars)].map((arr, index) => {
+                return index < activeStarsAgile ? <StarIcon /> : <StarBorderIcon />;
+                })}
+              </Box>
             </div>
           </ul>
         </section>
         <section className="App-languages">
+          <img className="casque" src={casque} alt="casque" height={50} width={50} />
+          <hr className="ligne-casque"></hr>
+          <hr className="ligne-pc"></hr>
+          <hr className="ligne-sourie"></hr>
+          <hr className="ligne-user"></hr>
+          <hr className="ligne-keyboard"></hr>
         <h3 className="App-language-title">Langues</h3>
-          <ul>
-            <li>Français</li>
-            <li>Anglais</li>
+          <ul className="App-langage-items">
+            <div className="App-langage-content">
+              <ProgressBar className="langage-french-read" completed={100} width={100} customLabel="lu"/>
+                <li className="App-langage-title-french">Français</li>
+              <ProgressBar className="langage-french-speak" completed={100} width={100}  customLabel="parler"/>
+              </div>
+            <div className="App-langage-content">
+              <ProgressBar className="langage-french-read" completed={85} width={100} customLabel="read"/>
+              <li className="App-langage-title-english">Anglais</li>
+              <ProgressBar className="langage-french-speak" completed={60} width={100} customLabel="speak"/>
+            </div>
           </ul>
         </section>
         <section className="App-savoir">
@@ -278,8 +355,9 @@ function App() {
             <li>Musiques Electroniques</li>
           </ul>
         </section>
+        </div>
+        </div>
     </div>
   );
-}
-
+};
 export default App;
